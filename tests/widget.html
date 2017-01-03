@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div> ClockJS Options </div>
+    <div id="hour"></div>
+    <div id="rawhour"></div>
+    <div id="minute"></div>
+    <div id="rawminute"></div>
+    <div id="am"></div>
+    <div id="date"></div>
+    <div id="datepadded"></div>
+    <div id="day"></div>
+    <div id="month"></div>
+    <div id="monthnum"></div>
+    <div id="year"></div>
+    <div id="hourtext"></div>
+    <div id="minuteonetext"></div>
+    <div id="minutetwotext"></div>
+    <div id="daytext"></div>
+    <div id="sdaytext"></div>
+    <div id="sdaytextmanual"></div>
+    <div id="monthtext"></div>
+    <div id="smonthtext"></div>
+    <div id="datetext"></div>
+    <div id="nth"></div>
+    <div id="tod"></div>
+    <div id="dateplus"></div>
+    <div id="timeStrPlus"></div>
+
+</body>
+
+<script type="text/javascript" src="../src/clock.js"></script>
+<script>
+clock({
+        twentyfour : false,
+        padzero : false,
+        refresh : 5000,
+        success: function(clock){
+          var d = document;
+          d.getElementById('hour').innerHTML = "Hour: " + clock.hour();
+          d.getElementById('rawhour').innerHTML = "Raw Hour: " + clock.rawhour();
+          d.getElementById('minute').innerHTML = "Minute: " + clock.minute();
+          d.getElementById('rawminute').innerHTML = "Raw Minute: " + clock.rawminute();
+          d.getElementById('am').innerHTML = "AM/PM: " + clock.am();
+          d.getElementById('date').innerHTML = "Date: " + clock.date();
+          d.getElementById('datepadded').innerHTML = "DatePadded: " + clock.datepadded();
+          d.getElementById('day').innerHTML = "Day: " + clock.day();
+          d.getElementById('month').innerHTML = "Month: " + clock.month();
+          d.getElementById('monthnum').innerHTML = "MonthNum: " + clock.monthnum();
+          d.getElementById('year').innerHTML = "Year: " + clock.year();
+          d.getElementById('hourtext').innerHTML = "HourText: " + clock.hourtext();
+          d.getElementById('minuteonetext').innerHTML = "MinuteOneText: " + clock.minuteonetext();
+          d.getElementById('minutetwotext').innerHTML = "MinuteTwoText: " + clock.minutetwotext();
+          d.getElementById('daytext').innerHTML = "Day Text: " + clock.daytext();
+          d.getElementById('sdaytext').innerHTML = "ShortDayText: " + clock.sdaytext();
+          d.getElementById('sdaytextmanual').innerHTML = "ShortDayTextM: " + clock.sdaytextmanual(3);
+          d.getElementById('monthtext').innerHTML = "MonthText: " + clock.monthtext();
+          d.getElementById('smonthtext').innerHTML = "ShortMonthText: " + clock.smonthtext();
+          d.getElementById('datetext').innerHTML = "Date Text: " + clock.datetext();
+          d.getElementById('nth').innerHTML = "Nth: " + clock.nth();
+          d.getElementById('tod').innerHTML = "TimeOfDay: " + clock.tod();
+          d.getElementById('timeStrPlus').innerHTML = "Time String: " + clock.timeStrPlus('min');
+        }
+      });
+</script>
+
+</html>
