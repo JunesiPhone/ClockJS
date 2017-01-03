@@ -16,4 +16,4 @@ clock({
 ```
 
 Created and maintained by @JunesiPhone http://junesiphone.com
-Projects this is used in and many other iOS Widgets http://junesiphone.com/OPW
+Projects is used in many iOS Widgets and OPWs http://junesiphone.com/OPW
